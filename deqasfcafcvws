@@ -7682,8 +7682,6 @@ ToggleDriveBoa:OnChanged(function(Value)
         _G.AppleAutoDriveBoat = Value
     end) 
     Options.ToggleDriveBoat:SetValue(false)
-
-    
     spawn(function()
         while wait() do
             pcall(function()
