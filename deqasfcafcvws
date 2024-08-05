@@ -7678,8 +7678,7 @@ ToggleAutoY:OnChanged(function(Value)
 
 
 
-
-       Tabs.Race:AddButton({
+  Tabs.Race:AddButton({
         Title = "Mink V4 dash fake",
         Description = "",
         Callback = function()
@@ -7709,16 +7708,16 @@ end)
 Visual:AddSeperator("Highlight")
 
 
-        end
-    })
+ end 
+})
 
 
 
-      Tabs.Race:AddButton({
+  Tabs.Race:AddButton({
         Title = "Fake V4 Fishman",
         Description = "",
         Callback = function()
-         require(game:GetService("ReplicatedStorage").Notification).new("Fishman V4!"):Display();
+        require(game:GetService("ReplicatedStorage").Notification).new("Fishman V4!"):Display();
  wait()
  setthreadcontext(5)
 
