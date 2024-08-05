@@ -7675,3 +7675,74 @@ ToggleAutoY:OnChanged(function(Value)
 
         end
     })
+
+
+
+
+       Tabs.Race:AddButton({
+        Title = "Mink V4 dash fake",
+        Description = "",
+        Callback = function()
+         local Player = game:GetService("Players").LocalPlayer
+
+ local ArgsDash = {
+  Character = Player.Character,
+  Duration = .25,
+  CFrame = Player.Character.HumanoidRootPart.CFrame,
+ }
+
+ local old; old = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+  if self.Name == "CommE" then
+  local args = {
+   ...
+  }
+
+  if args[1] == "Dodge" then
+  coroutine.wrap(function() require(ReplicatedStorage.Effect.Container.Shared.Lightningtopos)(ArgsDash) end)()
+  end
+  end
+
+  return old(self, ...)
+  end))
+end)
+
+Visual:AddSeperator("Highlight")
+
+
+        end
+    })
+
+
+
+      Tabs.Race:AddButton({
+        Title = "Fake V4 Fishman",
+        Description = "",
+        Callback = function()
+         require(game:GetService("ReplicatedStorage").Notification).new("Fishman V4!"):Display();
+ wait()
+ setthreadcontext(5)
+
+ local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+ local Player = game:GetService("Players").LocalPlayer
+
+ local ArgsTransform = {
+  Character = game.Players.LocalPlayer.Character,
+  CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame,
+  Color1 = Color3.fromRGB(5, 115, 166),
+  Color2 = Color3.fromRGB(5, 115, 166),
+  Color3 = Color3.fromRGB(5, 115, 166),
+ }
+
+ Player.Character.Humanoid:LoadAnimation(ReplicatedStorage.Util.Anims.Storage["2"].RaceTransform):Play()
+
+ delay(1, function()
+  pcall(function() require(ReplicatedStorage.Effect.Container.RaceTransformation.Main)(ArgsTransform) end)
+  end)
+
+
+        end
+    })
+
+
+  
