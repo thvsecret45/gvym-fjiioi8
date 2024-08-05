@@ -7682,7 +7682,7 @@ ToggleAutoY:OnChanged(function(Value)
         Title = "Mink V4 dash fake",
         Description = "",
         Callback = function()
-         local Player = game:GetService("Players").LocalPlayer
+        local Player = game:GetService("Players").LocalPlayer
 
  local ArgsDash = {
   Character = Player.Character,
