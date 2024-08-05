@@ -6022,22 +6022,19 @@ Tabs.Misc:AddButton({
 
 
       Tabs.Universal:AddButton({
-        Title = "Noclip",
+        Title = "flyy",
         Description = "",
         Callback = function()
-        Clip = false
-	wait(0.1)
-	local function NoclipLoop()
-		if Clip == false and speaker.Character ~= nil then
-			for _, child in pairs(speaker.Character:GetDescendants()) do
-				if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
-					child.CanCollide = false
-				end
-			end
-		end
+        if not IsOnMobile then
+		NOFLY()
+		wait()
+		sFLY()
+	else
+		mobilefly(speaker)
 	end
-	Noclipping = RunService.Stepped:Connect(NoclipLoop)
-        end
+	if args[1] and isNumber(args[1]) then
+		iyflyspeed = args[1]
+	end
     })
 
 
