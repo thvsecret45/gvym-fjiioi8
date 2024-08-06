@@ -6946,7 +6946,15 @@ end
       end    
 })
 
+Tabs.Main:AddButton({
+        Title = "Enable Shiftlock",
+        Description = "",
+        Callback = function()            
+        speaker.DevEnableMouseLock = true
+	notify('Shiftlock','Shift lock is now available')
 
+    })
+ 
 Tabs.Shop:AddButton({
         Title = "Dual Head Debate", 
 	Description = "",
@@ -7759,27 +7767,6 @@ ToggleAutoY:OnChanged(function(Value)
     end)
 
 
-    local Togglebluegear = Tabs.Race:AddToggle("Togglebluegear", {Title = "Auto Teleport To Blue Gear", Description = "", Default = false })
-    _G.TweenMGear = value
-    StopTween(_G.TweenMGear)
-end)
-spawn(function()
-    pcall(function()
-        while wait() do
-            if _G.TweenMGear then
-				if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-					for i,v in pairs(game:GetService("Workspace").Map.MysticIsland:GetChildren()) do 
-						if v:IsA("MeshPart")then 
-                            if v.Material ==  Enum.Material.Neon then  
-                                ATween(v.CFrame)
-                            end
-                        end
-					end
-				end
-			end
-        end
-    end)
-end)
 
 
  
