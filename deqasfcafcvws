@@ -7061,9 +7061,7 @@ Tabs.Main:AddButton({
     })
  
 
-      end
-    })
- 
+  
             
 Tabs.Shop:AddButton({
         Title = "Dual Head Debate", 
