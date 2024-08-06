@@ -7677,7 +7677,7 @@ ToggleAutoY:OnChanged(function(Value)
     end)
 
   local ToggleAuto Rengoku = Tabs.Main:AddToggle("ToggleAuto Rengoku", {Title = "G.AutoRengoku", Description = "",Default = false })
-ToggleEnablePvp:OnChanged(function(Value)
+ToggleAuto Rengoku:OnChanged(function(Value)
   G.AutoRengoku = Value
 end)
 Options.ToggleAutoRengoku:SetValue(false)
@@ -7718,7 +7718,7 @@ Options.ToggleAutoRengoku:SetValue(false)
 
  
     local ToggleObservationv2 = Tabs.Main:AddToggle("ToggleAutoObservationv2", {Title = "Auto Observation Haki v2",Description = "", Default = false })
-    Togglelockmoon:OnChanged(function(Value)
+    ToggleObservationv2:OnChanged(function(Value)
       _G.AutoObservationv2 = Value
     end) 
     Options.ToggleObservationv2:SetValue(false)
