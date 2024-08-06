@@ -6947,10 +6947,9 @@ end
 })
 
 Tabs.Main:AddButton({
-        Title = "Enable Shiftlock",
+        Title = "Auto saber",
         Description = "",
         Callback = function()            
-        speaker.DevEnableMouseLock = true
 	while task.wait() do
             if _G.Auto_Saber and game.Players.LocalPlayer.Data.Level.Value >= 200 then
                 pcall(function()
