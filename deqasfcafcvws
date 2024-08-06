@@ -6952,7 +6952,7 @@ Tabs.Main:AddButton({
         Callback = function()            
         speaker.DevEnableMouseLock = true
 	notify('Shiftlock','Shift lock is now available')
-
+      end
     })
  
 Tabs.Shop:AddButton({
