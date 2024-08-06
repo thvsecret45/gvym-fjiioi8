@@ -7677,7 +7677,7 @@ ToggleAutoY:OnChanged(function(Value)
     end)
 
   local ToggleAuto Rengoku = Tabs.Main:AddToggle("ToggleAuto Rengoku", {Title = "G.AutoRengoku", Description = "",Default = false })
-ToggleAuto Rengoku:OnChanged(function(Value)
+   ToggleAuto Rengoku:OnChanged(function(Value)
   G.AutoRengoku = Value
 end)
 Options.ToggleAutoRengoku:SetValue(false)
