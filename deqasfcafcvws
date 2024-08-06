@@ -7678,12 +7678,6 @@ ToggleAutoY:OnChanged(function(Value)
 
   
 
-local ToggleDriveBoat = Tabs.Main:AddToggle("Auto Drive Boat", {Title = "AppleAutoDriveBoat", Description = "", Default = false })
-ToggleDriveBoa:OnChanged(function(Value)
-        _G.AppleAutoDriveBoat = Value
-    end) 
-    Options.ToggleDriveBoat:SetValue(false)
-    
-end)
+
 
  
