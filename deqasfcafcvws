@@ -7676,7 +7676,23 @@ ToggleAutoY:OnChanged(function(Value)
     end
     end)
 
-  
+  local ToggleAuto Rengoku = Tabs.SubFarming:AddToggle("ToggleAuto Rengoku", {Title = "G.AutoRengoku", Description = "",Default = false })
+ToggleEnablePvp:OnChanged(function(Value)
+  G.AutoRengoku = Value
+end)
+Options.ToggleAutoRengoku:SetValue(false)
+
+spawn(function()
+  pcall(function()
+      while wait() do
+          if _G.EnabledPvP then
+              if game:GetService("Players").LocalPlayer.PlayerGui.Main.PvpDisabled.Visible == true then
+                  game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EnablePvp")
+              end
+          end
+      end
+  end)
+end)
 
 
 
