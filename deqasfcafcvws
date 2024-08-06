@@ -7759,70 +7759,27 @@ ToggleAutoY:OnChanged(function(Value)
     end)
 
 
-local ToggleFindMoon = Tabs.Main:AddToggle("ToggleFindMoon", {Title = "Server Hop Full Moon",Description = "", Default = false })
-ToggleFindMoon:OnChanged(function(Value)
-    _G.AutoFindMoon = Value
+    local Togglebluegear = Tabs.Race:AddToggle("Togglebluegear", {Title = "Auto Teleport To Blue Gear", Description = "", Default = false })
+    _G.TweenMGear = value
+    StopTween(_G.TweenMGear)
 end)
-Options.ToggleFindMoon:SetValue(false)
-
-
 spawn(function()
-    while wait() do
-        if _G.AutoFindMoon then
-        if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-            wait(2.0)
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-            Hop()
-            Fluent:Notify({
-                Title = "Hiru HuB",
-                Content = "Turn Off Find Full Moon...",
-                SubContent = "", -- Optional
-                Duration = 5 -- Set to nil to make the notification not disappear
-            })
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-            Hop()
-            Fluent:Notify({
-                Title = "Hiru HuB",
-                Content = "Hop...",
-                SubContent = "", -- Optional
-                Duration = 5 -- Set to nil to make the notification not disappear
-            })
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-            Hop()
-            Fluent:Notify({
-                Title = "Hiru HuB",
-                Content = "Hop...",
-                SubContent = "", -- Optional
-                Duration = 5 -- Set to nil to make the notification not disappear
-            })
-        else
-            Hop()
-            end
+    pcall(function()
+        while wait() do
+            if _G.TweenMGear then
+				if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
+					for i,v in pairs(game:GetService("Workspace").Map.MysticIsland:GetChildren()) do 
+						if v:IsA("MeshPart")then 
+                            if v.Material ==  Enum.Material.Neon then  
+                                ATween(v.CFrame)
+                            end
+                        end
+					end
+				end
+			end
         end
-    end
+    end)
 end)
-
-
-local ToggleMirageIsland = Tabs.Main:AddToggle("ToggleMirageIsland", {Title = "Server Hop Mirage Island",Description = "", Default = false })
-ToggleMirageIsland:OnChanged(function(Value)
-    _G.FindMirageIsland = Value
-end)
-Options.ToggleMirageIsland:SetValue(false)
-
-spawn(function()
-    while wait() do
-    if _G.FindMirageIsland then
-        if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") or game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-            if HighestPointRealCFrame and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - HighestPointRealCFrame.Position).Magnitude > 10 then
-            Tween(getHighestPoint().CFrame * CFrame.new(0, 211.88, 0))
-                end
-        elseif not game:GetService("Workspace").Map:FindFirstChild("MysticIsland") or not game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-            Hop()
-            end
-        end
-    end
-end)
-end
 
 
  
