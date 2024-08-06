@@ -6873,15 +6873,7 @@ Tabs.Main:AddButton({
         Title = "Auto Haki", 
 	Description = "",
 	Callback = function()
-          if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
-                local args = {
-                    [1] = "Buso"
-                }
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-            end
-        end
-    end
-
+          
       end    
 })
 
