@@ -6947,7 +6947,7 @@ end
 })
 
 Tabs.Main:AddButton({
-        Title = "Auto saber Complet",
+        Title = "Auto st",
         Description = "",
         Callback = function()            
 	 pcall(function()
@@ -7056,6 +7056,10 @@ Tabs.Main:AddButton({
                 end)
             end
         end
+
+      end
+    })
+ 
 
       end
     })
