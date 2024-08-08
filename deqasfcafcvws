@@ -53,8 +53,7 @@ local SettingsSection = SettingsTab:AddSection({
 SettingsSection:AddButton({
 	Name = "autohaki",
 	Callback = function()
-      
-            if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+        if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                 local args = {
                     [1] = "Buso"
                 }
@@ -62,11 +61,9 @@ SettingsSection:AddButton({
             end
         end
     end
-
-          
-
-  	end    
+  end    
 })
+            
 
 --Settings End--
 
