@@ -51,9 +51,20 @@ local SettingsSection = SettingsTab:AddSection({
 })
 
 SettingsSection:AddButton({
-	Name = "Destroy UI",
+	Name = "autohaki",
 	Callback = function()
-        OrionLib:Destroy()
+      
+            if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+                local args = {
+                    [1] = "Buso"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+            end
+        end
+    end
+
+          
+
   	end    
 })
 
