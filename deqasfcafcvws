@@ -7706,6 +7706,7 @@ ToggleAutoBudySwordHop:OnChanged(function(Value)
 local ToggleAutoBudySword = Tabs.SubFarming:AddToggle("local ToggleAutoBudySword", {Title = "Auto Buddy Sword", Description = "", Default = false })
 Togglelocal ToggleAutoBudySword:OnChanged(function(Value)
     _G.AutoBudySword = Value
-     StopTween(_G.AutoBudySword)
+    Options.ToggleAutoY:SetValue(false)
+       StopTween(_G.AutoBudySword)
     end)
 
