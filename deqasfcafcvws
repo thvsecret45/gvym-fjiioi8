@@ -5,7 +5,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "yl",
+    Title = "wewyl",
     SubTitle = "By dearyGT(fluent ui)",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 300),
@@ -7702,3 +7702,10 @@ ToggleAutoBudySwordHop:OnChanged(function(Value)
             end
         end
     end)
+
+local ToggleAutoBudySword = Tabs.SubFarming:AddToggle("local ToggleAutoBudySword", {Title = "Auto Buddy Sword", Description = "", Default = false })
+Togglelocal ToggleAutoBudySword:OnChanged(function(Value)
+    _G.AutoBudySword = Value
+     StopTween(_G.AutoBudySword)
+    end)
+
