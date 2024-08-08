@@ -7648,42 +7648,9 @@ ToggleAutoY:OnChanged(function(Value)
     end)
 
  
-   local ToggleKillPlayerTrial = Tabs.Race:AddToggle("ToggleKillPlayerTrial", {Title = "Auto Kill player Trial!",Description = "", Default = false })
-ToggleKillPlayerTrial:OnChanged(function(Value)
-    _G.KillAfterTrials = value
-    StopTween(_G.KillAfterTrials)
-end)
 
-spawn(function()
-    while wait() do 
-        pcall(function()
-            if _G.KillAfterTrials then
-                for i,v in pairs(game:GetService("Workspace").Characters:GetChildren()) do
-                    if v.Name ~= game.Players.LocalPlayer.Name and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
-                        if v.Humanoid.Health > 0 then
-                            repeat wait()
-                                AutoHaki()
-                                EquipWeapon(_G.SelectWeapon)
-                                NameTarget = v.Name
-                                TP1(v.HumanoidRootPart.CFrame * CFrame.new(0,0,5))
-                                v.HumanoidRootPart.CanCollide = false
-                                v.Head.CanCollide = false
-                                v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
-                                Click()
-                            until not _G.KillAfterTrials or not v.Parent or v.Humanoid.Health <= 0 
-                        end
-                    end
-                end
-            end
-        end)
-    end
-end)
-
-
-
-
- local ToggleAutoBudySwordHop  = Tabs.SubFarming:AddToggle("ToggleAutoBudySwordHop", {Title = "Auto Buddy Sword Hop", Description = "", Default = false })
- ToggleAutoBudySwordHop:OnChanged(function(Value)      
+ local ToggleAutoBudySwordHop = Tabs.SubFarming:AddToggle("ToggleAutoBudySwordHop", {Title = "Auto Buddy Sword Hop", Description = "", Default = false })                                                                                                                
+ToggleAutoBudySwordHop:OnChanged(function(Value)   
      _G.AutoBudySwordHop = value
     end)
   Options.ToggleAutoY:SetValue(false)
@@ -7692,7 +7659,7 @@ end)
     spawn(function()
         while wait() do
             if _G.AutoBudySword and World3 then
-                pcall(function()
+                pcall(function()   
                     if game:GetService("Workspace").Enemies:FindFirstChild("Cake Queen") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v.Name == "Cake Queen" then
