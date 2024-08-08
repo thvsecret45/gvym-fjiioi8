@@ -7682,18 +7682,7 @@ end)
 
 
 
-local ToggleAutoY = Tabs.SubFarming:AddToggle("ToggleAutoY", {Title = "Auto Turn On V4", Description = "", Default = false })
-ToggleAutoY:OnChanged(function(Value)
-    _G.AutoY = Value
-    end)
- Options.ToggleAutoY:SetValue(false)
-
-
-
-
-
-
- local ToggleAutoBudySwordHop  = Tabs.SubFarming:AddToggle("ToggleAutoY", {Title = "Auto Buddy Sword Hop", Description = "", Default = false })
+ local ToggleAutoBudySwordHop  = Tabs.SubFarming:AddToggle("ToggleAutoBudySwordHop", {Title = "Auto Buddy Sword Hop", Description = "", Default = false })
  ToggleAutoBudySwordHop:OnChanged(function(Value)      
      _G.AutoBudySwordHop = value
     end)
