@@ -6,7 +6,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "Test Hub Oficial",
-    SubTitle = "By dearyGT(fluent ui)",
+    SubTitle = "hihhi",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 300),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -7336,7 +7336,30 @@ end
  })
 
 
- 
+ Tabs.Main:AddButton({
+        Title = "Auto Pole v1",
+        Description = "",
+        Callback = function()            
+          if CheckBoss("Thunder God [Lv. 575] [Boss]") then
+            Target = CheckBoss("Thunder God [Lv. 575] [Boss]")
+            if game.Workspace.Enemies:FindFirstChild(Target.Name) then
+                repeat
+                    if Target then
+                        KillMob(Target)
+                    end
+                    task.wait(1)
+                until not Target or not Target:FindFirstChild("Humanoid") or
+                    not Target:FindFirstChild("HumanoidRootPart") and Target["Humanoid"].Health <= 0
+                UseFastAttack = false
+            elseif Target then
+                spawn(Tweento(Target.HumanoidRootPart.CFrame * CFrame.new(0, 40, 0)), 1)
+                NoClip = true
+            end
+        else
+        end
+    end
+ end
+})
         
             
 Tabs.Shop:AddButton({
