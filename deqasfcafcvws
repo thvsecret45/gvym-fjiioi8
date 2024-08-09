@@ -6839,6 +6839,24 @@ Tabs.Main:AddButton({
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RF/KitsuneStatuePray"):InvokeServer()
  end
     })
+    
+ Tabs.Main:AddButton({
+        Title = "Obs Farm",
+        Description = "",
+        Callback = function()
+             repeat task.wait()
+                        if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
+                            game:GetService('VirtualUser'):CaptureController()
+                            game:GetService('VirtualUser'):SetKeyDown('0x65')
+                            wait(2)
+                            game:GetService('VirtualUser'):SetKeyUp('0x65')
+                        end
+                    until game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") 
+                end
+            end)
+        end
+        end
+    })
 
 
 Tabs.Shop:AddButton({
@@ -7648,65 +7666,4 @@ ToggleAutoY:OnChanged(function(Value)
     end)
 
  
-
- local ToggleAutoBudySwordHop = Tabs.SubFarming:AddToggle("ToggleAutoBudySwordHop", {Title = "Auto Buddy Sword Hop", Description = "", Default = false })                                                                                                                
-ToggleAutoBudySwordHop:OnChanged(function(Value)   
-     _G.AutoBudySwordHop = value
-    end)
-  Options.ToggleAutoY:SetValue(false)
-  
-    local BigMomPos = CFrame.new(-731.2034301757812, 381.5658874511719, -11198.4951171875)
-    spawn(function()
-        while wait() do
-            if _G.AutoBudySword and World3 then
-                pcall(function()   
-                    if game:GetService("Workspace").Enemies:FindFirstChild("Cake Queen") then
-                        for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == "Cake Queen" then
-                                if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                    repeat task.wait()
-                                        AutoHaki()
-                                        EquipWeapon(_G.SelectWeapon)
-                                        v.HumanoidRootPart.CanCollide = false
-                                        v.Humanoid.WalkSpeed = 0
-                                        v.HumanoidRootPart.Size = Vector3.new(50,50,50)
-                                        topos(v.HumanoidRootPart.CFrame * Pos)
-                                        game:GetService("VirtualUser"):CaptureController()
-                                        game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
-                                        sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)
-                                    until not _G.AutoBudySword or not v.Parent or v.Humanoid.Health <= 0
-                                end
-                            end
-                        end
-                    else
-                    if BypassTP then
-                    if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BigMomPos.Position).Magnitude > 1500 then
-			        BTP(BigMomPos)
-				    elseif (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - BigMomPos.Position).Magnitude < 1500 then
-				    topos(BigMomPos)
-					end
-				else
-				    topos(BigMomPos)
-				end
-				    UnEquipWeapon(_G.SelectWeapon)
-                    topos(CFrame.new(-731.2034301757812, 381.5658874511719, -11198.4951171875))
-                        if game:GetService("ReplicatedStorage"):FindFirstChild("Cake Queen") then
-                            topos(game:GetService("ReplicatedStorage"):FindFirstChild("Cake Queen").HumanoidRootPart.CFrame * CFrame.new(2,20,2))
-                        else
-                            if _G.AutoBudySwordHop then
-                                Hop()
-                            end
-                        end
-                    end
-                end)
-            end
-        end
-    end)
-
-local ToggleAutoBudySword = Tabs.SubFarming:AddToggle("local ToggleAutoBudySword", {Title = "Auto Buddy Sword", Description = "", Default = false })
-Togglelocal ToggleAutoBudySword:OnChanged(function(Value)
-    _G.AutoBudySword = Value
-    Options.ToggleAutoBudySword:SetValue(false)
-       StopTween(_G.AutoBudySword)
-    end)
 
