@@ -3018,6 +3018,35 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/vinhuchi/temp-repos/m
           end    
     })
 
+ local Section = M:AddSection({
+        Name = "Aimbot scripts Keyless"
+    })
+
+     M:AddButton({
+        Name = "Aimbot Skibid",
+        Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/brosula123/CAMLOCK/main/SKIBIDI"))() 
+          end    
+    })
+
+    M:AddButton({
+        Name = "Aimbot Bacon",
+        Callback = function()
+          loadstring(game:HttpGet("https://rentry.co/n55gmtpi/raw", true))()
+          end    
+    })
+
+       M:AddButton({
+        Name = "Aimbot Winnable",
+        Callback = function()
+        _G.Mode = "Aimbot" -- Aimbot / Normal
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xlostpexz/tyuiop/Fps/Loading.lua"))()
+          end    
+    })
+
+
+
+
 
     local Section = M:AddSection({
         Name = "Auto Farm Level"
