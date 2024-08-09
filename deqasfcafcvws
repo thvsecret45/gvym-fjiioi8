@@ -3036,14 +3036,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/vinhuchi/temp-repos/m
           end    
     })
 
-       M:AddButton({
-        Name = "Aimbot Winnable",
-        Callback = function()
-        _G.Mode = "Aimbot" -- Aimbot / Normal
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xlostpexz/tyuiop/Fps/Loading.lua"))()
-          end    
-    })
-
 
 
 
