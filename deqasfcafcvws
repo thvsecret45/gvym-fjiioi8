@@ -3416,13 +3416,13 @@ Farmfasttoggle = M:AddToggle({
 })
 
 local Section = M:AddSection({
-    Name = "Kaitun Met Vaiz"
+    Name = "Mystic"
 })
 
-M:AddParagraph("Kaitun/Cantay","Kaitun bản này đell khác gì bản kia.")
+M:AddParagraph("Kill Myst.")
 
 M:AddToggle({
-    Name = "Kaitun[Ko có kill players]",
+    Name = "Kaitun[ kill players]",
     Default = false,
     Flag = "Kaitun",
     Save = true,
@@ -3727,7 +3727,7 @@ local Section = M:AddSection({
     Name = "Boss"
 })
 
-M:AddParagraph("Auto Farm Boss :","Chờ Update thôi ae!!!")
+M:AddParagraph("Auto Farm Boss :","W test Hub")
 
     local Section = M:AddSection({
         Name = "Observation Haki"
@@ -4209,7 +4209,7 @@ IQ:AddToggle({
             Name = "ArenaTrainer"
         })
 
-        IQ:AddLabel("Tự động đánh hình nộm")
+        IQ:AddLabel("Auto Items Hop")
 
         IQ:AddToggle({
             Name = "Automatically hit the dummy",
