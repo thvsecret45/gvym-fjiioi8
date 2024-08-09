@@ -5,7 +5,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "wewyl",
+    Title = "wewy666l",
     SubTitle = "By dearyGT(fluent ui)",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 300),
@@ -6844,19 +6844,393 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
         Title = "Obs Farm",
         Description = "",
         Callback = function()
-             repeat task.wait()
-                        if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                            game:GetService('VirtualUser'):CaptureController()
-                            game:GetService('VirtualUser'):SetKeyDown('0x65')
-                            wait(2)
-                            game:GetService('VirtualUser'):SetKeyUp('0x65')
+        end
+        if not doorsaber() then
+            if game:GetService("Workspace").Map.Jungle.QuestPlates.Door.CanCollide then
+                if DoorTouch() then
+                    pcall(
+                        function()
+                            Tweento(DoorTouch().Button.CFrame)
                         end
-                    until game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") 
+                    )
                 end
-            end)
+            else
+                if doorcup() then
+                    if
+                        game.ReplicatedStorage.Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon") ~= 0 and
+                            game.ReplicatedStorage.Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon") ~= 1
+                     then
+                        if
+                            not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Cup") and
+                                not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Cup")
+                         then
+                            if
+                                (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position -
+                                    CFrame.new(
+                                        1112.46521,
+                                        4.92147732,
+                                        4364.55469,
+                                        -0.743286014,
+                                        -4.82822775e-11,
+                                        -0.668973804,
+                                        4.62103383e-10,
+                                        1,
+                                        -5.85609283e-10,
+                                        0.668973804,
+                                        -7.444102e-10,
+                                        -0.743286014
+                                    ).Position).Magnitude < 5
+                             then
+                                toTarget(
+                                    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                                    CFrame.new(
+                                        1113.66992,
+                                        7.5484705,
+                                        4365.27832,
+                                        -0.78613919,
+                                        -2.19578524e-08,
+                                        -0.618049502,
+                                        1.02977182e-09,
+                                        1,
+                                        -3.68374984e-08,
+                                        0.618049502,
+                                        -2.95958493e-08,
+                                        -0.78613919
+                                    ).Position,
+                                    CFrame.new(
+                                        1113.66992,
+                                        7.5484705,
+                                        4365.27832,
+                                        -0.78613919,
+                                        -2.19578524e-08,
+                                        -0.618049502,
+                                        1.02977182e-09,
+                                        1,
+                                        -3.68374984e-08,
+                                        0.618049502,
+                                        -2.95958493e-08,
+                                        -0.78613919
+                                    )
+                                )
+                                firetouchinterest(
+                                    game:GetService("Workspace").Map.Desert.Cup,
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart,
+                                    0
+                                )
+                                firetouchinterest(
+                                    game:GetService("Workspace").Map.Desert.Cup,
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart,
+                                    1
+                                )
+                                return
+                            end
+                            toTarget(
+                                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                                CFrame.new(
+                                    1112.46521,
+                                    4.92147732,
+                                    4364.55469,
+                                    -0.743286014,
+                                    -4.82822775e-11,
+                                    -0.668973804,
+                                    4.62103383e-10,
+                                    1,
+                                    -5.85609283e-10,
+                                    0.668973804,
+                                    -7.444102e-10,
+                                    -0.743286014
+                                ).Position,
+                                CFrame.new(
+                                    1112.46521,
+                                    4.92147732,
+                                    4364.55469,
+                                    -0.743286014,
+                                    -4.82822775e-11,
+                                    -0.668973804,
+                                    4.62103383e-10,
+                                    1,
+                                    -5.85609283e-10,
+                                    0.668973804,
+                                    -7.444102e-10,
+                                    -0.743286014
+                                )
+                            )
+                        else
+                            EquipWeaponName("Cup")
+                            if
+                                game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Cup") and
+                                    game:GetService("Players").LocalPlayer.Backpack.Cup.Handle:FindFirstChild(
+                                        "TouchInterest"
+                                    ) or
+                                    game:GetService("Players").LocalPlayer.Character:FindFirstChild("Cup") and
+                                        game:GetService("Players").LocalPlayer.Character.Cup.Handle:FindFirstChild(
+                                            "TouchInterest"
+                                        )
+                             then
+                                toTarget(
+                                    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                                    CFrame.new(
+                                        1395.77307,
+                                        37.4733238,
+                                        -1324.34631,
+                                        -0.999978602,
+                                        -6.53588605e-09,
+                                        0.00654155109,
+                                        -6.57083277e-09,
+                                        1,
+                                        -5.32077493e-09,
+                                        -0.00654155109,
+                                        -5.3636442e-09,
+                                        -0.999978602
+                                    ).Position,
+                                    CFrame.new(
+                                        1395.77307,
+                                        37.4733238,
+                                        -1324.34631,
+                                        -0.999978602,
+                                        -6.53588605e-09,
+                                        0.00654155109,
+                                        -6.57083277e-09,
+                                        1,
+                                        -5.32077493e-09,
+                                        -0.00654155109,
+                                        -5.3636442e-09,
+                                        -0.999978602
+                                    )
+                                )
+                            elseif
+                                game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Cup") and
+                                    not game:GetService("Players").LocalPlayer.Backpack.Cup.Handle:FindFirstChild(
+                                        "TouchInterest"
+                                    ) or
+                                    game:GetService("Players").LocalPlayer.Character:FindFirstChild("Cup") and
+                                        not game:GetService("Players").LocalPlayer.Character.Cup.Handle:FindFirstChild(
+                                            "TouchInterest"
+                                        )
+                             then
+                                if
+                                    (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position -
+                                        Vector3.new(1457.8768310547, 88.377502441406, -1390.6892089844)).Magnitude > 8
+                                 then
+                                    toTarget(
+                                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                                        CFrame.new(1457.8768310547, 88.377502441406, -1390.6892089844).Position,
+                                        CFrame.new(1457.8768310547, 88.377502441406, -1390.6892089844)
+                                    )
+                                else
+                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
+                                        "ProQuestProgress",
+                                        "SickMan"
+                                    )
+                                end
+                            end
+                        end
+                    elseif game.ReplicatedStorage.Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon") == 0 then
+                        if
+                            game.ReplicatedStorage:FindFirstChild("Mob Leader [Lv. 120] [Boss]") or
+                                game.workspace.Enemies:FindFirstChild("Mob Leader [Lv. 120] [Boss]")
+                         then
+                            coountsaber1 = 1
+                            local by = game.workspace.Enemies
+                            if game.ReplicatedStorage:FindFirstChild("Mob Leader [Lv. 120] [Boss]") then
+                                by = game.ReplicatedStorage
+                            end
+                            for r, v in next, by:GetChildren() do
+                                if v.Name == "Mob Leader [Lv. 120] [Boss]" and v.Humanoid.Health > 0 then
+                                    repeat
+                                        wait()
+                                        KillMob(v)
+                                    until not v or not v.Parent or v.Humanoid.Health == 0
+                                end
+                            end
+                        else
+                        end
+                    elseif game.ReplicatedStorage.Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon") == 1 then
+                        if
+                            not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Relic") and
+                                not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Relic")
+                         then
+                            if
+                                (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position -
+                                    CFrame.new(
+                                        -1404.07996,
+                                        29.8520069,
+                                        5.26677656,
+                                        0.888123989,
+                                        -4.0340602e-09,
+                                        0.459603906,
+                                        7.5884703e-09,
+                                        1,
+                                        -5.8864642e-09,
+                                        -0.459603906,
+                                        8.71560069e-09,
+                                        0.888123989
+                                    )).Magnitude > 8
+                             then
+                                toTarget(
+                                    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                                    CFrame.new(
+                                        -1404.07996,
+                                        29.8520069,
+                                        5.26677656,
+                                        0.888123989,
+                                        -4.0340602e-09,
+                                        0.459603906,
+                                        7.5884703e-09,
+                                        1,
+                                        -5.8864642e-09,
+                                        -0.459603906,
+                                        8.71560069e-09,
+                                        0.888123989
+                                    ).Position,
+                                    CFrame.new(
+                                        -1404.07996,
+                                        29.8520069,
+                                        5.26677656,
+                                        0.888123989,
+                                        -4.0340602e-09,
+                                        0.459603906,
+                                        7.5884703e-09,
+                                        1,
+                                        -5.8864642e-09,
+                                        -0.459603906,
+                                        8.71560069e-09,
+                                        0.888123989
+                                    )
+                                )
+                            else
+                                game.ReplicatedStorage.Remotes.CommF_:InvokeServer("ProQuestProgress", "RichSon")
+                            end
+                        else
+                            EquipWeaponName("Relic")
+                            toTarget(
+                                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                                CFrame.new(-1405.3677978516, 29.977333068848, 4.5685839653015).Position,
+                                CFrame.new(-1405.3677978516, 29.977333068848, 4.5685839653015)
+                            )
+                        end
+                    end
+                else
+                    if
+                        not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Torch") and
+                            not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Torch")
+                     then
+                        toTarget(
+                            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                            game:GetService("Workspace").Map.Jungle.Torch.Position,
+                            game:GetService("Workspace").Map.Jungle.Torch.CFrame
+                        )
+                    else
+                        EquipWeaponName("Torch")
+                        if
+                            (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position -
+                                CFrame.new(
+                                    1115.23499,
+                                    4.92147732,
+                                    4349.36963,
+                                    -0.670654476,
+                                    -2.18307523e-08,
+                                    0.74176991,
+                                    -9.06980624e-09,
+                                    1,
+                                    2.1230365e-08,
+                                    -0.74176991,
+                                    7.51052998e-09,
+                                    -0.670654476
+                                ).Position).Magnitude < 5
+                         then
+                            toTarget(
+                                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                                CFrame.new(
+                                    1114.59863,
+                                    4.92147732,
+                                    4350.64258,
+                                    -0.508235395,
+                                    1.00975717e-09,
+                                    0.861218214,
+                                    7.77848985e-09,
+                                    1,
+                                    3.41788708e-09,
+                                    -0.861218214,
+                                    8.43606784e-09,
+                                    -0.508235395
+                                ).Position,
+                                CFrame.new(
+                                    1114.59863,
+                                    4.92147732,
+                                    4350.64258,
+                                    -0.508235395,
+                                    1.00975717e-09,
+                                    0.861218214,
+                                    7.77848985e-09,
+                                    1,
+                                    3.41788708e-09,
+                                    -0.861218214,
+                                    8.43606784e-09,
+                                    -0.508235395
+                                )
+                            )
+                            firetouchinterest(
+                                game.Players.LocalPlayer.Character.Torch.Handle,
+                                game:GetService("Workspace").Map.Desert.Burn.Fire,
+                                0
+                            )
+                            firetouchinterest(
+                                game.Players.LocalPlayer.Character.Torch.Handle,
+                                game:GetService("Workspace").Map.Desert.Burn.Fire,
+                                1
+                            )
+                            return
+                        end
+                        toTarget(
+                            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position,
+                            CFrame.new(
+                                1115.23499,
+                                4.92147732,
+                                4349.36963,
+                                -0.670654476,
+                                -2.18307523e-08,
+                                0.74176991,
+                                -9.06980624e-09,
+                                1,
+                                2.1230365e-08,
+                                -0.74176991,
+                                7.51052998e-09,
+                                -0.670654476
+                            ).Position,
+                            CFrame.new(
+                                1115.23499,
+                                4.92147732,
+                                4349.36963,
+                                -0.670654476,
+                                -2.18307523e-08,
+                                0.74176991,
+                                -9.06980624e-09,
+                                1,
+                                2.1230365e-08,
+                                -0.74176991,
+                                7.51052998e-09,
+                                -0.670654476
+                            )
+                        )
+                    end
+                end
+            end
+        else
+            if CheckMob({"Saber Expert [Lv. 200] [Boss]"}, true) then
+                donandngu2 = CheckMob({"Saber Expert [Lv. 200] [Boss]"}, true)
+                if game.workspace.Enemies:FindFirstChild(donandngu2.Name) then
+                    KillMob(donandngu2)
+                else
+                    spawn(Tweento(donandngu2.HumanoidRootPart.CFrame), 1)
+                end
+            else
+            end
         end
-        end
-    })
+    end
+
+ end
+})
 
 
 Tabs.Shop:AddButton({
