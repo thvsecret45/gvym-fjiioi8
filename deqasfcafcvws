@@ -6478,7 +6478,7 @@ C:AddButton({
 })
 
 C:AddButton({
-    Name = "Maris Hub",
+    Name = "Titles",
     Callback = function()
         local args = {
             [1] = "getTitles"
@@ -8443,13 +8443,13 @@ pcall(function()
         if _G.AutoEliteHunter then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Test Hub",
                     Content = "[EN] : Please cancel the farrm level quest (if any)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
                 })
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Test Hub",
                     Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level (nếu có)",
                     Image = "rbxassetid://4483345998",
                     Time = 9
@@ -8618,7 +8618,7 @@ spawn(function()
             if _G.AutoObservation then
                 if game:GetService("Players").LocalPlayer.VisionRadius.Value >= 3000 then
                     OrionLib:MakeNotification({
-                        Name = "Maris Hub",
+                        Name = "Test Hub",
                         Content = "!!You Are Max Point!!",
                         Image = "rbxassetid://14919714384",
                         Time = 5
@@ -8767,7 +8767,7 @@ spawn(function()
         if Mybeli <= 2500000 or MyFragment <= 5000 then
             wait(2.0)
             OrionLib:MakeNotification({
-                Name = "Maris Hub",
+                Name = "Test Hub",
                 Content = "You not have beli or fragment!",
                 Image = "rbxassetid://4483345998",
                 Time = 5
@@ -8928,7 +8928,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "Test Hub",
                             Content = "Not Have Superhuman",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8941,7 +8941,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "Test Hub",
                             Content = "Not Have Death Step",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8954,8 +8954,8 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
-                            Content = "Not Have SharkMan Karate",
+                            Name = "Test Hub",
+                            Content = "Not Have Shakrkarate",
                             Image = "rbxassetid://14919714384",
                             Time = 5
                         })
@@ -8967,7 +8967,7 @@ spawn(function()
                         end
                     else
                         gOrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "Test Hub",
                             Content = "Not Have Electric Claw",
                             Image = "rbxassetid://14919714384",
                             Time = 5
@@ -8978,7 +8978,7 @@ spawn(function()
                         if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon").Level.Value >= 400 or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon") and game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon").Level.Value >= 400 then
                             if string.find(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true), "Bring") then
                                 OrionLib:MakeNotification({
-                                    Name = "Maris Hub",
+                                    Name = "Test Hub",
                                     Content = "Not Have Enough Material",
                                     Image = "rbxassetid://14919714384",
                                     Time = 5
@@ -8990,7 +8990,7 @@ spawn(function()
                         end
                     else
                         OrionLib:MakeNotification({
-                            Name = "Maris Hub",
+                            Name = "Test Hub",
                             Content = "You Not Have Dragon Talon! ",
                             Image = "rbxassetid://14919714384",
                             Time = 5
