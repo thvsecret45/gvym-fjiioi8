@@ -1,87 +1,54 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostDuckyy/UI-Libraries/main/Neverlose/source.lua"))()
--- Toggle UI: Library:Toggle()
+local library = loadstring(game:HttpGet("https://github.com/GoHamza/AppleLibrary/blob/main/main.lua?raw=true"))()
 
-local Window = Library:Window({
-    text = "Window"
-})
+local window = library:init("Titlebar", true, Enum.KeyCode.RightShift, true)
 
-local TabSection = Window:TabSection({
-    text = "TabSection"
-})
+window:Divider("I'm a divider!")
 
-local Tab = TabSection:Tab({
-    text = "Tab",
-    icon = "rbxassetid://7999345313",
-})
+local sectionA = window:Section("Test Elements")
 
-local Section = Tab:Section({
-    text = "Section"
-})
+sectionA:Divider("I'm another divider!")
 
-Section:Button({
-    text = "Button",
-    callback = function()
-        print("Clicked button")
-    end,
-})
+sectionA:Button("Click me!", function()
+   print("Button clicked.")
+end)
 
-Section:Toggle({
-    text = "Toggle",
-    state = false, -- Default boolean
-    callback = function(boolean)
-        print("Toggle current: ",boolean)
-    end
-})
+sectionA:Label("Lorem ipsum dolor sit amet.")
 
-Section:Slider({
-    text = "Slider",
-    min = 10,
-    max = 100,
-    -- [[Float = 0,]] Idk what it does
-    callback = function(number)
-        print(number)
-    end
-})
+sectionA:Switch("Switch me!", false, function(a)
+   print(a)
+end)
 
-Section:Dropdown({
-    text = "Dropdown",
-    list = {"Apple", "Banana","Coconut"},
-    default = "Apple",
-    callback = function(String)
-        print(String)
-    end
-})
+sectionA:TextField("Enter text here!", "Enter text here...", function(a)
+   print(a)
+end)
 
-Section:Textbox({
-    text = "Textbox",
-    value = "Default",
-    callback = function(String)
-        print(String)
-    end
-})
+window:Divider("Just dividin'")
 
-Section:Colorpicker({
-    text = "Colorpicker",
-    color = Color3.new(1,1,1),
-    callback = function(HSV)
-        print(HSV)
-    end
-})
+local sectionB = window:Section("Test Notifications")
 
---[[
-    blacklisted keybind:
-        Return
-        Space
-        Tab
-        W,A,S,D,I,O
-        Unknown
-]]
+sectionB:Divider("Dividers are cool!")
 
-Section:Keybind({
-    text = "Keybind",
-    default = Enum.KeyCode.Z,
-    callback = function(defaultBind)
-        print("Triggered keybind")
-        print(defaultBind)
-    end
-})
+sectionB:Button("Temporary Notification", function()
+   window:TempNotify("Be careful!", "We are going to beat you up.", "rbxassetid://12608259004")
+end)
+
+sectionB:Button("Notification 1", function() window:Notify("Hello!", "I am notification", "Button1", "rbxassetid://12608259004",
+   function()
+       print(1)
+   end)
+end)
+
+sectionB:Button("Notification 2", function() window:Notify2("Hello!", "I am notification", "Button 1", "Button 2", "rbxassetid://12608259004",
+   function()
+       print(1)
+   end,
+   function()
+       print(2)
+   end)
+end)
+
+window:GreenButton(function()
+   print("You clicked the green button!")
+end)
+
+sectionA:Select()
