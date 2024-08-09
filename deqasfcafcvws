@@ -2541,7 +2541,8 @@ spawn(function()
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Dev:Test Hub Hub<Color=/>"):Display()
 end)
 
-local Update = loadstring(Game:HttpGet"https://roblox.relzscript.xyz/source/relzhub/library/pc.lua")()
+local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/x9PSwiftz/Panda/main/Notification.lua"))() 
+
 
 
 local Window = OrionLib:MakeWindow({Name = "Test Hub", HidePremium = false, IntroText = "Test Hub", SaveConfig = true, ConfigFolder = "Test Hub"})
