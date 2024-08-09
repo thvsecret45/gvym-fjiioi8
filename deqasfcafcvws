@@ -2370,12 +2370,12 @@ local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 CamShake:Stop()
 
     HttpService = game:GetService("HttpService")
-    local i = "Maris Hub"
+    local i = "Test Hub"
     local j = "-BloxFruit.json"
     local l = game.Players.LocalPlayer.Name .. j
     if Adel then
         HttpService = game:GetService("HttpService")
-        local i = "Maris Hub"
+        local i = "Test Hub"
         local j = "-BloxFruit.json"
         local l = game.Players.LocalPlayer.Name .. j
     end
@@ -2550,14 +2550,14 @@ OrionLib:MakeNotification({
 })
 
 OrionLib:MakeNotification({
-	Name = "Maris Hub",
+	Name = "Test Hub",
 	Content = "Please Wait...",
 	Image = "rbxassetid://4483345998",
 	Time = 25
 })
 
 OrionLib:MakeNotification({
-    Name = "Maris Hub",
+    Name = "Test Hub",
     Content = "Loading...",
     Image = "rbxassetid://4483345998",
     Time = 5
@@ -2655,15 +2655,15 @@ local Section = W:AddSection({
 })
 
 
-W:AddLabel("Script By Maris")
+W:AddLabel("Script By deary!!")
 
 local Section = W:AddSection({
     Name = "Update"
 })
 
-W:AddLabel("[+] Welcome to Maris Hub!")
-W:AddLabel("[+] Discord: https://discord.com/invite/S4EtaxnZ3D")
-W:AddLabel("[+] Cày Thuê Ở Discord")
+W:AddLabel("[+] Welcome to Test Hub!")
+W:AddLabel("[+] Discord: https://discord.gg/JKTuefABky")
+W:AddLabel("[+] Updated Ui etc")
 W:AddLabel("[+] Load Script Faster!")
 
 local Section = W:AddSection({
@@ -2916,6 +2916,52 @@ end
             for i,v in pairs(x2Code) do
                 RedeemCode(v)
             end
+          end    
+    })
+
+M:AddButton({
+        Name = "Azure auto bounty(not my script)",
+        Callback = function()
+        getgenv().SpamSkill = false
+getgenv().AutoUseRaceV3 = true
+getgenv().AutoUseRacev4 = true
+getgenv().SpamSkillOnRaceV4 = true
+getgenv().Invisible = true
+getgenv().InCombatNoReset = false
+getgenv().Team = "Pirates" -- Marines
+getgenv().TweenSpeed = 300 -- 350 max or Get Tp Back
+ getgenv().Setting = { -- Select Weapon, Self Explain
+        ["Melee"] = {["Enable"] = true,["Delay"] = 3,
+          ["Skills"] = {
+            ["Z"] = {["Enable"] = true,["HoldTime"] = 0,["TimeToNextSkill"] = 0,},
+            [ "X"] = {["Enable"] = true,["HoldTime"] = 0, ["TimeToNextSkill"] = 0,},
+            ["C"] = {["Enable"] = true,["HoldTime"] = 0, ["TimeToNextSkill"] = 0,},
+            },
+        },
+        ["Blox Fruit"] = {["Enable"] = true, ["Delay"] = 2,
+            ["Skills"] = {
+                ["Z"] = {["Enable"] = true, ["HoldTime"] = 1.5, ["TimeToNextSkill"] = 0,},
+                ["X"] = { ["Enable"] = true, ["HoldTime"] = 0, ["TimeToNextSkill"] = 0,},
+                ["C"] = { ["Enable"] = true, ["HoldTime"] = 0,["TimeToNextSkill"] = 0, },
+                ["V"] = { ["Enable"] = true, ["HoldTime"] = 0,["TimeToNextSkill"] = 0,},
+                ["F"] = {["Enable"] = true,["HoldTime"] = 0, ["TimeToNextSkill"] = 0,},
+            },
+        },
+        ["Sword"] = { ["Enable"] = false, ["Delay"] = 2,
+            ["Skills"] = {
+                ["Z"] = {["Enable"] = true,  ["HoldTime"] = 0.5,["TimeToNextSkill"] = 0,},
+                ["X"] = {["Enable"] = true, ["HoldTime"] = 0.5, ["TimeToNextSkill"] = 0,},
+            },
+        },
+        ["Gun"] = {["Enable"] = false, ["Delay"] = 2,
+            ["Skills"] = {
+                ["Z"] = {["Enable"] = true,["HoldTime"] = 0.5,["TimeToNextSkill"] = 0,},
+                ["X"] = {["Enable"] = true,["HoldTime"] = 0.5,["TimeToNextSkill"] = 0,
+                },
+            },
+        }
+    }
+loadstring(game:HttpGet('https://raw.githubusercontent.com/vinhuchi/temp-repos/main/FreeAutoBounty.lua'))()
           end    
     })
 
@@ -11213,7 +11259,7 @@ spawn(function()
             if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
                 wait(2.0)
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Test Hub",
                     Content = "Turn Off Hop Find Moon Please",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11221,7 +11267,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Test Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11229,7 +11275,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Test Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11237,7 +11283,7 @@ spawn(function()
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
                 Hop()
                 OrionLib:MakeNotification({
-                    Name = "Maris Hub",
+                    Name = "Test Hub",
                     Content = "Hop Server",
                     Image = "rbxassetid://4483345998",
                     Time = 5
@@ -11250,7 +11296,7 @@ spawn(function()
     end)
 
 OrionLib:MakeNotification({
-        Name = "Maris Hub",
+        Name = "Test Hub",
         Content = "Loading script complete!, You can now enable the function!",
         Image = "rbxassetid://4483345998",
         Time = 5
@@ -11283,7 +11329,7 @@ end)
 OrionLib:Init()
 
 OrionLib:MakeNotification({
-    Name = "Maris Hub",
+    Name = "Test Hub",
     Content = "Loading Config Complete!!",
     Image = "rbxassetid://4483345998",
     Time = 5
