@@ -2541,15 +2541,21 @@ spawn(function()
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Dev:Test Hub Hub<Color=/>"):Display()
 end)
 
-local z = loadstring(game:HttpGet("https://raw.githubusercontent.com/DichVuSpace/FunctionScriptTemp/main/Library/OrionLibrary"))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 
-local Window = redzlib:MakeWindow({
-  Title = "redz Hub : Blox Fruits",
-  SubTitle = "by redz9999",
-  SaveFolder = "redz Hub | Blox Fruits.lua"
-})
-
+local Window =
+    Fluent:CreateWindow(
+    {
+        Title = "Wildcard Hub",
+        SubTitle = "discord.gg/5H8JWZbW4X",
+        TabWidth = 160,
+        Size = UDim2.fromOffset(530, 350),
+        Acrylic = true,
+        Theme = "Dark",
+        MinimizeKey = Enum.KeyCode.End
+    }
+)
 
 
 -------------Tab-----------------------
