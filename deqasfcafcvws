@@ -2541,22 +2541,31 @@ spawn(function()
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Dev:Test Hub Hub<Color=/>"):Display()
 end)
 
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Update = loadstring(Game:HttpGet"https://roblox.relzscript.xyz/source/relzhub/library/pc.lua")()
 
 
-local Window =
-    Fluent:CreateWindow(
-    {
-        Title = "Wildcard Hub",
-        SubTitle = "discord.gg/5H8JWZbW4X",
-        TabWidth = 160,
-        Size = UDim2.fromOffset(530, 350),
-        Acrylic = true,
-        Theme = "Dark",
-        MinimizeKey = Enum.KeyCode.End
-    }
-)
+local Window = OrionLib:MakeWindow({Name = "Test Hub", HidePremium = false, IntroText = "Test Hub", SaveConfig = true, ConfigFolder = "Test Hub"})
 
+OrionLib:MakeNotification({
+	Name = "Test Hub",
+	Content = "Choose Teams Bro?",
+	Image = "rbxassetid://4483345998",
+	Time = 7
+})
+
+OrionLib:MakeNotification({
+	Name = "Test Hub",
+	Content = "Please Wait...",
+	Image = "rbxassetid://4483345998",
+	Time = 25
+})
+
+OrionLib:MakeNotification({
+    Name = "Test Hub",
+    Content = "Loading...",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
 
 -------------Tab-----------------------
 
