@@ -2636,11 +2636,10 @@ local Section = W:AddSection({
 })
 
 
-W:AddLabel("Script By deary!!")
 
-local Section = W:AddSection({
-    Name = "Update"
-})
+
+MainFarm:AddSection({"Credits"})
+
 
 W:AddLabel("[+] Welcome to Test Hub!")
 W:AddLabel("[+] Discord: https://discord.gg/JKTuefABky")
