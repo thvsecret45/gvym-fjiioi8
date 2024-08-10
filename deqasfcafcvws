@@ -2549,14 +2549,12 @@ local Window = redzlib:MakeWindow({
 })
 
 -------------Tab-----------------------
+
+
 local MainFarm = Window:MakeTab({"Farm", "Home"})
 
 
-local M = Window:MakeTab({
-    Name = "General",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
+
 
 local ST = Window:MakeTab({
     Name = "Setting",
