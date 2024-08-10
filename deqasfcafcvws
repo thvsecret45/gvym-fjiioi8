@@ -2543,13 +2543,13 @@ end)
 
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 local Window = redzlib:MakeWindow({
-  Title = "test : Blox Fruits",
+  Title = "te1s1t : Blox Fruits",
   SubTitle = "by redz9999",
   SaveFolder = "redz Hub | Blox Fruits.lua"
 })
 
 -------------Tab-----------------------
-local WainFarm = Window:MakeTab({"Farm", "Home"})
+local MainFarm = Window:MakeTab({"Farm", "Home"})
 
 
 local M = Window:MakeTab({
@@ -2640,11 +2640,10 @@ local Section = W:AddSection({
 
 MainFarm:AddSection({"Credits"})
 
+MainFarm:AddSection({"[+] Welcome to Test Hub!"})
+MainFarm:AddSection({"[+] Discord: https://discord.gg/JKTuefABky"})
+MainFarm:AddSection({""[+] Updated Ui et"})
 
-W:AddLabel("[+] Welcome to Test Hub!")
-W:AddLabel("[+] Discord: https://discord.gg/JKTuefABky")
-W:AddLabel("[+] Updated Ui etc")
-W:AddLabel("[+] Load Script Faster!")
 
 local Section = W:AddSection({
     Name = "Status"
