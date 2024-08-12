@@ -3504,6 +3504,41 @@ spawn(function()
     end
 end)
 
+
+ local Section = M:AddSection({
+    Name = "VisualSection :"
+})
+
+
+M:AddToggle({
+    Name = "RainFruitOld",
+    Default = false,
+    Flag = "OldFruits",
+    Save = true,
+    Callback = function(Value)
+      for i, v in pairs(game:GetObjects("rbxassetid://14759368201")[1]:GetChildren()) do
+                v.Parent = game.Workspace.Map
+                v:MoveTo(
+                    game.Players.LocalPlayer.Character.PrimaryPart.Position +
+                        Vector3.new(math.random(-50, 50), 100, math.random(-50, 50))
+                )
+                if v.Fruit:FindFirstChild("AnimationController") then
+                    v.Fruit:FindFirstChild("AnimationController"):LoadAnimation(v.Fruit:FindFirstChild("Idle")):Play()
+                end
+                v.Handle.Touched:Connect(
+                    function(otherPart)
+                        if otherPart.Parent == game.Players.LocalPlayer.Character then
+                            v.Parent = game.Players.LocalPlayer.Backpack
+                            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+                        end
+                    end
+                )
+            end
+
+    end    
+})
+
+
    local Section = M:AddSection({
     Name = "Mob & Boss Farm"
 })
@@ -3750,7 +3785,7 @@ local Section = M:AddSection({
     Name = "Boss"
 })
 
-M:AddParagraph("Auto Farm Boss :","")
+M:AddParagraph("Auto Farm Boss :","W test Hub")
 
     local Section = M:AddSection({
         Name = "Observation Haki"
@@ -3774,40 +3809,6 @@ M:AddParagraph("Auto Farm Boss :","")
         Save = true,
         Callback = function(Value)
             _G.AutoObservation_Hop = Value
-        end    
-    })
-
-
- M:AddToggle({
-        Name = "Auto Indra colors",
-        Default = false,
-        Flag = "Auto Farm Observation Haki",
-        Save = true,
-        Callback = function(Value)
-        function CheckColorRipIndra()
-    conchodonand = {}
-    for r, v in next, game:GetService("Workspace").Map["Boat Castle"].Summoner.Circle:GetChildren() do
-        if v:IsA("Part") and v:FindFirstChild("Part") and v.Part.BrickColor.Name == "Dark stone grey" then
-            conchodonand[v.BrickColor.Name] = v
-        end
-    end
-    return conchodonand
-end
-function ActivateColor(cw)
-    concho = {["Hot pink"] = "Winter Sky", ["Really red"] = "Pure Red", ["Oyster"] = "Snow White"}
-    conchogg = concho[cw]
-    if conchogg then
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("activateColor", conchogg)
-    end
-end
-function AutoActiveColorRip_Indra()
-    for r, v in pairs(CheckColorRipIndra()) do
-        ActivateColor(r)
-        Tweento(v.CFrame)
-        firetouchinterest(v.TouchInterest)
-    end
-end
-
         end    
     })
 
