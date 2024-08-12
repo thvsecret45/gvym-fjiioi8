@@ -11628,7 +11628,7 @@ spawn(
         until game:GetService("Workspace").Map:FindFirstChild("MysticIsland")
         if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
             PostWebhook(
-                "https://discord.com/api/webhooks/1108041186662424617/WaEVGp67j8wetVB153s29Oj0VeX_Rz9lDLHEW2CvAAC8sjkhvdFOIGReKKYNDjLewC1Q",
+                "https://discord.com/api/webhooks/1272541796202709114/4iP1KN-4-kaj96QWqal1vYjcI1-CPHN2zxiAteGwaUJucIqqhb0AWyJ7aFzqk80nmhMI",
                 GetMsg2()
             )
         end
@@ -11641,7 +11641,7 @@ spawn(
         until CheckMoon() == "Full Moon" or CheckMoon() == "Next Night"
         if CheckMoon() == "Full Moon" or CheckMoon() == "Next Night" then
             PostWebhook(
-                "https://discord.com/api/webhooks/1108003058014765116/XX5bRapE8PQAEYdG1ibXcANBD2eLysFg9IiKbrz_oMhzg43hCjwGsv7FNtbJpHPZXtY9",
+                "https://discord.com/api/webhooks/1272541406723964979/nh8YfzslRwKNOClhSafu4ac84KvRn5jCZ0qjMm2PRbnmEBZ5WNRQ9C5OU-Nd3d-O8_42",
                 GetMsg2()
             )
         end
@@ -11672,7 +11672,7 @@ spawn(
             local cp =
                 co(
                 {
-                    Url = "https://discord.com/api/webhooks/1098132832968249396/0WwsPAMici2_eY8TKo9lWqCFvofbScNSaEDxZsW_OyryC1aixy0tR48SXacTJTiVJ0n8",
+                    Url = "https://discord.com/api/webhooks/1272541548747292703/_BF-75aX5ugLfzkVLgvWztO-TMxDzBVLJKOkrhHsWH_8UcMDnAd3p-2VcbHCTt_dFFzf",
                     Method = "POST",
                     Headers = {["Content-Type"] = "application/json"},
                     Body = game:GetService("HttpService"):JSONEncode(mfgg)
@@ -11696,6 +11696,21 @@ spawn(
         end
     end
 )
+
+function PostWebhook(cm, cn)
+    local co = http_request or request or HttpPost or syn.request
+    local cp =
+        co(
+        {
+            Url = cm,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = game:GetService("HttpService"):JSONEncode(cn)
+        }
+    )
+    return ""
+end
+
 
 OrionLib:MakeNotification({
         Name = "Test Hub",
