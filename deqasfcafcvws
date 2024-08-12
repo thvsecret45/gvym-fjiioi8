@@ -2757,7 +2757,7 @@ local locallv = W:AddLabel("Level")
         end
     end)
 
-local  = W:AddLabel("mIRAGEGE ")
+local localAdvance = W:AddLabel("mIRAGEGE ")
     
    local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Remotes = ReplicatedStorage.Remotes
