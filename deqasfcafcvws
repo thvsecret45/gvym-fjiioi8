@@ -3041,17 +3041,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/vinhuchi/temp-repos/m
         Name = "WebHook mst"
     })
 
-  M:AddButton({
-        Name = "",
+   M:AddTextbux({
+        Name = "Aimbot Bacon",
         Callback = function()
-        PostWebhook(h["WebhookUrl"], GetMsgTest())
-
+         
           end    
-    })
-
-
-    local Section = M:AddSection({
-        Name = "Auto Farm Level"
     })
 
 
