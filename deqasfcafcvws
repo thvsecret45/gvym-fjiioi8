@@ -3037,7 +3037,17 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/vinhuchi/temp-repos/m
     })
 
 
+ local Section = M:AddSection({
+        Name = "WebHook mst"
+    })
 
+  M:AddButton({
+        Name = "",
+        Callback = function()
+        PostWebhook(h["WebhookUrl"], GetMsgTest())
+
+          end    
+    })
 
 
     local Section = M:AddSection({
