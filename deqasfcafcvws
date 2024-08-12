@@ -5,4 +5,4 @@ local Window = redzlib:MakeWindow({
   SaveFolder = "redz Hub | Blox Fruits.lua"
 })
 
-  AutoSea:AddSection({"Main"})
+local MainFarm = Window:MakeTab({"Farm", "Home"})
