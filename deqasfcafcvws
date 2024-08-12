@@ -3510,13 +3510,10 @@ end)
 })
 
 
-M:AddToggle({
-    Name = "RainFruitOld",
-    Default = false,
-    Flag = "OldFruits",
-    Save = true,
-    Callback = function(Value)
-      for i, v in pairs(game:GetObjects("rbxassetid://14759368201")[1]:GetChildren()) do
+M:AddButton({
+        Name = "RainFruit(Old)",
+        Callback = function()
+          for i, v in pairs(game:GetObjects("rbxassetid://14759368201")[1]:GetChildren()) do
                 v.Parent = game.Workspace.Map
                 v:MoveTo(
                     game.Players.LocalPlayer.Character.PrimaryPart.Position +
@@ -3535,8 +3532,9 @@ M:AddToggle({
                 )
             end
 
-    end    
-})
+          end    
+    })
+
 
 
    local Section = M:AddSection({
