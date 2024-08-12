@@ -11763,19 +11763,6 @@ spawn(
     end
 )
       
-function PostWebhook(cm, cn)
-    local co = http_request or request or HttpPost or syn.request
-    local cp =
-        co(
-        {
-            Url = cm,
-            Method = "POST",
-            Headers = {["Content-Type"] = "application/json"},
-            Body = game:GetService("HttpService"):JSONEncode(cn)
-        }
-    )
-    return ""
-end
 
 
 OrionLib:Init()
