@@ -3206,7 +3206,15 @@ end)
     })
 
 
-
+  M:AddToggle({
+        Name = "Skill Z",
+        Default = false,
+        Flag = "Skill Z",
+        Save = true,
+        Callback = function(Value)
+            _G.SkillZ = Value
+        end    
+    }
 
 
 local Section = M:AddSection({
@@ -11755,6 +11763,20 @@ spawn(
     end
 )
       
+function PostWebhook(cm, cn)
+    local co = http_request or request or HttpPost or syn.request
+    local cp =
+        co(
+        {
+            Url = cm,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = game:GetService("HttpService"):JSONEncode(cn)
+        }
+    )
+    return ""
+end
+
 
 OrionLib:Init()
 
