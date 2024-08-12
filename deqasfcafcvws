@@ -3041,13 +3041,18 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/vinhuchi/temp-repos/m
         Name = "WebHook mst"
     })
 
-   M:AddTextbux({
-        Name = "Aimbot Bacon",
-        Callback = function()
-         
-          end    
-    })
+ToggleFarm = M:AddToggle({
+    Name = "4/4",
+    Default = false,
+    Flag = "LevelFarm",
+    Save = true,
+    Callback = function(Value)
+    SaveSettings("WebhookWhenMoon", bm)
+    end    
+})
 
+
+ 
 
 M:AddParagraph("Main Farm","Click to Box to Farm, I ready update new mob farm!.")
 
