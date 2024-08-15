@@ -2549,7 +2549,7 @@ Window:AddMinimizeButton({
 })
 
 local Tabs = {
-  Discord = Window:MakeTab({"Discord", "Info"}),
+  Discord = Window:MakeTab({"Credit", "Info"}),
   MainFarm = Window:MakeTab({"Farm", "Home"}),
   Items = Window:MakeTab({"Items", "Swords"}),
   Stats = Window:MakeTab({"Stats", "Signal"}),
@@ -2568,7 +2568,7 @@ local function AddToggle(Tab, Settings, Flag)
   Tab:AddToggle(Settings)
 end
 
-local _Discord = Tabs.Discord do
+local _Credit = Tabs.Credit do
   _Discord:AddDiscordInvite({
     Name = "redz Hub | Community",
     Description = "Join our discord community to receive information about the next update",
@@ -2576,3 +2576,20 @@ local _Discord = Tabs.Discord do
     Invite = "https://discord.gg/7aR7kNVt4g"
   })
 end
+
+Credit:AddSection({"Lv"})
+  
+  local locallv = CreditTabs:AddParagraph({"Your level : "})
+
+  task.spawn(function()
+    while task.wait() do
+      if VerifyNPC("Urban") or VerifyNPC("Deandre") or VerifyNPC("Diablo") then
+        LabelElite:SetTitle("Elite Stats : Spawned")
+      else
+        LabelElite:SetTitle("Elite Stats : not Spawn")
+      end
+    end
+  end)
+
+
+
