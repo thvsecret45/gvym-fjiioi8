@@ -2587,7 +2587,7 @@ end
       if VerifyNPC("Urban") or VerifyNPC("Deandre") or VerifyNPC("Diablo") then
         LabelElite:SetTitle("Elite Stats : Spawned")
       else
-        LabelElite:SetTitle("Elite Stats : not Spawn")
+        LabelCredit:SetTitle("Elite Stats : not Spawn")
       end
     end
   end)
@@ -2595,7 +2595,7 @@ end
   if not IsOwner then
     task.spawn(function()
       while task.wait(1) do
-        LabelElit3:SetTitle("Elite Hunter progress : " .. FireRemote("level", "Progress"))
+        LabelCredit:SetTitle("Elite Hunter progress : " .. FireRemote("level", "Progress"))
       end
     end)
   end
