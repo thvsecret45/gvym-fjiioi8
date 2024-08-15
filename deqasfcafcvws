@@ -2577,10 +2577,10 @@ local _Credit = Tabs.Credit do
   })
 end
 
-  CreditTabs:AddSection({"Elite Hunter"})
+  Window:SelectTab(Tabs.MainFarm)
   
 
-  local LabelElit3 = CreditTabs:AddParagraph({"Elite Hunter progress : 0"})
+local LabelElit3 = CreditTabs:AddParagraph({"level : "})
   
 spawn(function()
         while wait() do
