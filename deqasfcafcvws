@@ -1,12 +1,35 @@
-local Window = redzlib:MakeWindow({
-  Title = "REDz HUB : Example",
-  SubTitle = "by : redz9999",
-  LoadText = "redz Hub",
-  Flags = "redz Hub | Example.lua"
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+local Window = redzlib:MakeWindow({ Title = "redz Hub : Meme Sea", SubTitle = "by redz9999", SaveFolder = "redz Bloxfruit" })
+Window:AddMinimizeButton({
+  Button = { Image = "rbxassetid://15298567397", BackgroundTransparency = 0 },
+  Corner = { CornerRadius = UDim.new(0, 6) }
 })
 
+local Tabs = {
+  Discord = Window:MakeTab({"Discord", "Info"}),
+  MainFarm = Window:MakeTab({"Farm", "Home"}),
+  Items = Window:MakeTab({"Items", "Swords"}),
+  Stats = Window:MakeTab({"Stats", "Signal"}),
+  Teleport = Window:MakeTab({"Teleport", "Locate"}),
+  Shop = Window:MakeTab({"Shop", "ShoppingCart"}),
+  Misc = Window:MakeTab({"Misc", "Settings"})
+}
 
+Window:SelectTab(Tabs.MainFarm)
 
+local function AddToggle(Tab, Settings, Flag)
+  Settings.Description = type(Settings[2]) == "string" and Settings[2]
+  Settings.Default = type(Settings[2]) ~= "string" and Settings[2]
+  Settings.Flag = Settings.Flag or Flag
+  Settings.Callback = function(Value) _env[Settings.Flag] = Value end
+  Tab:AddToggle(Settings)
+end
 
-local Tab = Window:MakeTab({Name = "Tab", Icon = "Home"})
-
+local _Discord = Tabs.Discord do
+  _Discord:AddDiscordInvite({
+    Name = "redz Hub | Community",
+    Description = "Join our discord community to receive information about the next update",
+    Logo = "rbxassetid://17382040552",
+    Invite = "https://discord.gg/7aR7kNVt4g"
+  })
+end
