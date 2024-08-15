@@ -2579,26 +2579,17 @@ end
 
   CreditTabs:AddSection({"Elite Hunter"})
   
-  local LabelElite = CreditTabs:AddParagraph({"Elite Stats : not Spawn"})
+
   local LabelElit3 = CreditTabs:AddParagraph({"Elite Hunter progress : 0"})
   
-  task.spawn(function()
-    while task.wait() do
-      if VerifyNPC("Urban") or VerifyNPC("Deandre") or VerifyNPC("Diablo") then
-        LabelElite:SetTitle("Elite Stats : Spawned")
-      else
-        LabelCredit:SetTitle("Elite Stats : not Spawn")
-      end
-    end
-  end)
-  
-  if not IsOwner then
-    task.spawn(function()
-      while task.wait(1) do
-        LabelCredit:SetTitle("Elite Hunter progress : " .. FireRemote("level", "Progress"))
-      end
+spawn(function()
+        while wait() do
+            pcall(function()
+                LabelElit3:SetTitle("Level :".." "..game:GetService("Players").LocalPlayer.Data.Level.Value)
+            end)
+        end
     end)
-  end
+    
   
 
   
