@@ -2577,8 +2577,7 @@ local _Credit = Tabs.Credit do
   })
 end
 
- Credit:AddSection({"Lv"})
-  
+local Paragraph = Tab2:AddParagraph({"Paragraph", ""})  
 local locallv = QuestsTabs:AddParagraph({"Elite Hunter progress : 0"})
 
  spawn(function()
