@@ -2577,7 +2577,7 @@ local _Credit = Tabs.Credit do
   })
 end
 
-  Window:SelectTab(Tabs.MainFarm)
+  Window:SelectTab(Tabs.Credit)
   
  local LabelRipIndra = MainFarmTabs:AddParagraph({"Rip Indra Stats : not Spawn"})
   
