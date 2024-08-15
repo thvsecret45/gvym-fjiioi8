@@ -2579,18 +2579,19 @@ end
 
   Window:SelectTab(Tabs.MainFarm)
   
+ local LabelRipIndra = MainFarmTabs:AddParagraph({"Rip Indra Stats : not Spawn"})
+  
+  task.spawn(function()
+    while task.wait(0.5) do
+      if VerifyNPC("rip_indra True Form") then
+        LabelRipIndra:SetTitle("Rip Indra Stats : Spawned")
+      else
+        LabelRipIndra:SetTitle("Rip Indra Stats : not Spawn")
+      end
+    end
+  end)
+  
 
-local LabelElit3 = CreditTabs:AddParagraph({"level : "})
-  
-spawn(function()
-        while wait() do
-            pcall(function()
-                LabelElit3:SetTitle("Level :".." "..game:GetService("Players").LocalPlayer.Data.Level.Value)
-            end)
-        end
-    end)
-    
-  
 
   
 
