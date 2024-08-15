@@ -2570,14 +2570,14 @@ end
 
 local _Credit = Tabs.Credit do
   _Discord:AddDiscordInvite({
-    Name = "redz Hub | Community",
+    Name = "test hun | Community",
     Description = "Join our discord community to receive information about the next update",
     Logo = "rbxassetid://17382040552",
     Invite = "https://discord.gg/7aR7kNVt4g"
   })
 end
 
-  Window:SelectTab(Tabs.Credit)
+  Window:SelectTab(Tabs.MainCredit)
   
  local LabelRipIndra = MainFarmTabs:AddParagraph({"Rip Indra Stats : not Spawn"})
   
@@ -2591,7 +2591,17 @@ end
     end
   end)
   
-
-
+ Window:SelectTab(Tabs.MainCredit)
+  
+ local Labellv = MainFarmTabs:AddParagraph({"lv : "})
+  
+  spawn(function()
+        while wait() do
+            pcall(function()
+                locallv:Set("Level :".." "..game:GetService("Players").LocalPlayer.Data.Level.Value)
+            end)
+        end
+    end)
+    
   
 
