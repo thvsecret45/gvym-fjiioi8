@@ -2577,19 +2577,18 @@ local _Credit = Tabs.Credit do
   })
 end
 
-Credit:AddSection({"Lv"})
+ Credit:AddSection({"Lv"})
   
   local locallv = CreditTabs:AddParagraph({"Your level : "})
 
-  task.spawn(function()
-    while task.wait() do
-      if VerifyNPC("Urban") or VerifyNPC("Deandre") or VerifyNPC("Diablo") then
-        LabelElite:SetTitle("Elite Stats : Spawned")
-      else
-        LabelElite:SetTitle("Elite Stats : not Spawn")
-      end
-    end
-  end)
+ spawn(function()
+        while wait() do
+            pcall(function()
+                locallv:SetTitle("Level :".." "..game:GetService("Players").LocalPlayer.Data.Level.Value)
+            end)
+        end
+    end)
 
 
+  
 
