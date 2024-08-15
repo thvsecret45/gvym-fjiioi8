@@ -2579,7 +2579,7 @@ end
 
  Credit:AddSection({"Lv"})
   
-  local locallv = CreditTabs:AddParagraph({"Your level : "})
+local locallv = QuestsTabs:AddParagraph({"Elite Hunter progress : 0"})
 
  spawn(function()
         while wait() do
