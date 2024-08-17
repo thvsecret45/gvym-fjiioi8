@@ -2578,7 +2578,9 @@ local _Discord = Tabs.Discord do
   })
 end
 
-MainFarm:AddToggle({"Auto Farm Level", false, function(Value)
+Window:SelectTab(Tabs.MainFarm)
+
+Farm:AddToggle({"Auto Farm Level", false, function(Value)
   getgenv()._G.AutoFarm = Value;_G.AutoFarm()
 end, Description = "Lavel Farm"})
 
