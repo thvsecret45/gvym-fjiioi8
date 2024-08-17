@@ -2538,7 +2538,7 @@ spawn(function()
     wait(.14)
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Join to discord for more updates<Color=/>"):Display()
     wait(.24)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Dev:Test Hub Hub<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Dev:Dearygt<Color=/>"):Display()
 end)
 
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
@@ -2573,10 +2573,21 @@ local _Discord = Tabs.Discord do
   _Discord:AddDiscordInvite({
     Name = "redz Hub | Community",
     Description = "Join our discord community to receive information about the next update",
-    Logo = "rbxassetid://17382040552",
-    Invite = "https://discord.gg/7aR7kNVt4g"
+    Logo = "rbxassetid://18744064404",
+    Invite = "https://discord.gg/JKTuefABky"
   })
 end
 
+ local LabelRipIndra = CreditTabs:AddParagraph({"Rip Indra Stats : not Spawn"})
   
+  task.spawn(function()
+    while task.wait(0.5) do
+      if VerifyNPC("rip_indra True Form") then
+        LabelRipIndra:SetTitle("Rip Indra Stats : Spawned")
+      else
+        LabelRipIndra:SetTitle("Rip Indra Stats : not Spawn")
+      end
+    end
+  end)
+
 
