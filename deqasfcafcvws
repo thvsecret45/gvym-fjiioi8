@@ -2578,39 +2578,7 @@ local _Discord = Tabs.Discord do
   })
 end
 
- local LabelRipIndra = CreditTabs:AddParagraph({"Rip Indra Stats : not Spawn"})
-  
-  task.spawn(function()
-    while task.wait(0.5) do
-      if VerifyNPC("rip_indra True Form") then
-        LabelRipIndra:SetTitle("Rip Indra Stats : Spawned")
-      else
-        LabelRipIndra:SetTitle("Rip Indra Stats : not Spawn")
-      end
-    end
-  end)
-
-
-  Credit:AddSection({"Elite Hunter"})
-  
-  local LabelElite = Credit:AddParagraph({"Elite Stats : not Spawn"})
-  local LabelElit3 = Credit:AddParagraph({"Elite Hunter progress : 0"})
-  
-  task.spawn(function()
-    while task.wait() do
-      if VerifyNPC("Urban") or VerifyNPC("Deandre") or VerifyNPC("Diablo") then
-        LabelElite:SetTitle("Elite Stats : Spawned")
-      else
-        LabelElite:SetTitle("Elite Stats : not Spawn")
-      end
-    end
-  end)
-  
-  if not IsOwner then
-    task.spawn(function()
-      while task.wait(1) do
-        LabelElit3:SetTitle("Elite Hunter progress : " .. FireRemote("EliteHunter", "Progress"))
-      end
-    end)
-  end
+MainFarm:AddToggle({"Auto Farm Level", false, function(Value)
+  getgenv()._G.AutoFarm = Value;_G.AutoFarm()
+end, Description = "Lavel Farm"})
 
