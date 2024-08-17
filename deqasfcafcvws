@@ -2558,6 +2558,7 @@ local Tabs = {
   Misc = Window:MakeTab({"Misc", "Settings"})
 }
 
+
 Window:SelectTab(Tabs.MainFarm)
 
 local function AddToggle(Tab, Settings, Flag)
@@ -2568,15 +2569,14 @@ local function AddToggle(Tab, Settings, Flag)
   Tab:AddToggle(Settings)
 end
 
-local _Credit = Tabs.Credit do
+local _Discord = Tabs.Discord do
   _Discord:AddDiscordInvite({
-    Name = "test hun | Community",
+    Name = "redz Hub | Community",
     Description = "Join our discord community to receive information about the next update",
     Logo = "rbxassetid://17382040552",
     Invite = "https://discord.gg/7aR7kNVt4g"
   })
 end
-
 
   
 
