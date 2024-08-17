@@ -2551,11 +2551,7 @@ Window:AddMinimizeButton({
 local Tabs = {
   Discord = Window:MakeTab({"Credit", "Info"}),
   MainFarm = Window:MakeTab({"Farm", "Home"}),
-  Items = Window:MakeTab({"Items", "Swords"}),
-  Stats = Window:MakeTab({"Stats", "Signal"}),
-  Teleport = Window:MakeTab({"Teleport", "Locate"}),
-  Shop = Window:MakeTab({"Shop", "ShoppingCart"}),
-  Misc = Window:MakeTab({"Misc", "Settings"})
+ 
 }
 
 
@@ -2578,9 +2574,10 @@ local _Discord = Tabs.Discord do
   })
 end
 
-Window:SelectTab(Tabs.MainFarm)
+MainFarm:AddSection({"Farm"})
 
 MainFarm:AddToggle({"Auto Farm Level", false, function(Value)
-  getgenv()._G.AutoFarm = Value;_G.AutoFarm()
+  getgenv()_G.AutoFarm = Value;_G.AutoFarm()
 end, Description = "Lavel Farm"})
+
 
