@@ -2542,7 +2542,7 @@ spawn(function()
 end)
 
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
-local Window = redzlib:MakeWindow({ Title = "test hub", SubTitle = "by momhot", SaveFolder = "redz Bloxfruit" })
+local Window = redzlib:MakeWindow({ Title = "niger.2exe", SubTitle = "by momhot", SaveFolder = "redz Bloxfruit" })
 Window:AddMinimizeButton({
   Button = { Image = "rbxassetid://18744064404", BackgroundTransparency = 0 },
   Corner = { CornerRadius = UDim.new(0, 6) }
@@ -2550,7 +2550,7 @@ Window:AddMinimizeButton({
 
 local Tabs = {
   Discord = Window:MakeTab({"Credit", "Info"}),
-  MainFarm = Window:MakeTab({"Farm", "Home"}),
+  Farm = Window:MakeTab({"Farm", "Home"}),
  
 }
 
@@ -2567,16 +2567,16 @@ end
 
 local _Discord = Tabs.Discord do
   _Discord:AddDiscordInvite({
-    Name = "redz Hub | Community",
+    Name = "Test Hub :) | Community",
     Description = "Join our discord community to receive information about the next update",
     Logo = "rbxassetid://18744064404",
     Invite = "https://discord.gg/JKTuefABky"
   })
 end
 
-MainFarm:AddSection({"Farm"})
+Farm:AddSection({"Farm"})
 
-MainFarm:AddToggle({"Auto Farm Level", false, function(Value)
+Farm:AddToggle({"Auto Farm Level", false, function(Value)
   getgenv().AutoFarm_Level = Value;AutoFarm_Level()
 end, Description = "Lavel Farm"})
 
