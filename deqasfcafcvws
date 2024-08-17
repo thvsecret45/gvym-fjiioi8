@@ -2555,7 +2555,7 @@ local Tabs = {
 }
 
 
-Window:SelectTab(Tabs.MainFarm)
+Window:SelectTab(Tabs.Farm)
 
 local function AddToggle(Tab, Settings, Flag)
   Settings.Description = type(Settings[2]) == "string" and Settings[2]
@@ -2565,7 +2565,7 @@ local function AddToggle(Tab, Settings, Flag)
   Tab:AddToggle(Settings)
 end
 
-local _Discord = Tabs.Discord do
+local _Farm = Tabs.Farm do
   _Discord:AddDiscordInvite({
     Name = "Test Hub :) | Community",
     Description = "Join our discord community to receive information about the next update",
