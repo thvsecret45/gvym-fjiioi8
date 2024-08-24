@@ -2221,16 +2221,24 @@ local posY = 60
 local posZ = 0
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-Main:Seperator("Main")
+--Create Tabs
+    Tabs.Main:AddParagraph({
+        Title = "Farming",
+        Content = ""
+    })
 
-Time = Main:Label("Executor Time")
+
+local localtime= Tabs.Main:AddParagraph({
+       Title = "Bounty / Honor",
+        Content = ""
+    })
 
 function UpdateTime()
 local GameTime = math.floor(workspace.DistributedGameTime+0.5)
 local Hour = math.floor(GameTime/(60^2))%24
 local Minute = math.floor(GameTime/(60^1))%60
 local Second = math.floor(GameTime/(60^0))%60
-Time:Set("[GameTime] : Hours : "..Hour.." Min : "..Minute.." Sec : "..Second)
+Time:SetDesc("[GameTime] : Hours : "..Hour.." Min : "..Minute.." Sec : "..Second)
 end
 
 spawn(function()
@@ -11101,4 +11109,4 @@ for _, fruitData in pairs(result) do
 end
 
 
-    Alert:create("Done Loaded!")
+  
