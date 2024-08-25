@@ -3,9 +3,6 @@ local placeId = game.PlaceId
 if placeId ==  then
     -- Rapid Rumble Bacon 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-elseif placeId == 16538799398 then
-    -- Bee tycoon
-    loadstring(game:HttpGet("https://github.com/KhSaeed90/Roblox/raw/workspace/10924916839.lua"))()
 else
     print("Unsupported")
 end
